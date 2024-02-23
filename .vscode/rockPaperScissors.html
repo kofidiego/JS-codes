@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="styles/rockPaperScissors.css">
+
+  </head>
+  <body>
+    <div class="myHeader">Rock Paper Scissors</div>
+    
+    <p>
+      <button class="moveButton" onclick="
+        
+       pickComputerMove();
+       playGame('rock');
+    
+       "> 
+       <img class="moveIcon" src="images/rock-memoji.jpg">
+      </button>
+     
+
+
+      <button class="moveButton" onclick="
+
+       pickComputerMove();
+       playGame('paper');
+
+       ">
+       <img src="images/paper-memoji.jpg" class="moveIcon">
+      </button>
+
+
+      <button class="moveButton" onclick="
+
+       pickComputerMove();
+       playGame('scissors');
+        
+       ">
+       <img src="images/scissors-memoji.jpg" class="moveIcon">
+      </button>
+
+      <p class="yourResult"></p>
+      <p class="move"></p>
+      <p class="jsScore"></p>
+
+      <button class="resetButton" onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScore(); 
+      ">
+        Reset Score
+      </button>
+    </p>
+    <script src="scripts/rockPaperScissors.js"></script>
+
+    <footer>
+      <p>&copy; Kofi Diego 2023</p>
+    </footer>
+  </body>
+</html>
+
